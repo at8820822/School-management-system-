@@ -1,0 +1,89 @@
+<div class="students-container">
+    <h2>Students List</h2>
+    <p>Total Students: {{ students.length }}</p>
+
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="add-student-form">
+        <div class="input-container">
+            <input type="text" formControlName="firstName" placeholder="First Name" required />
+            <div class="error" *ngIf="studentForm.controls['firstName'].invalid && studentForm.controls['firstName'].touched">
+                First Name is required (min 2 characters).
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" formControlName="lastName" placeholder="Last Name" required />
+            <div class="error" *ngIf="studentForm.controls['lastName'].invalid && studentForm.controls['lastName'].touched">
+                Last Name is required (min 2 characters).
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="date" formControlName="dateOfBirth" required />
+            <div class="error" *ngIf="studentForm.controls['dateOfBirth'].invalid && studentForm.controls['dateOfBirth'].touched">
+                Date of Birth is required.
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="email" formControlName="email" placeholder="Email" required />
+            <div class="error" *ngIf="studentForm.controls['email'].invalid && studentForm.controls['email'].touched">
+                Enter a valid email.
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" formControlName="phoneNumber" placeholder="Phone Number" required />
+            <div class="error" *ngIf="studentForm.controls['phoneNumber'].invalid && studentForm.controls['phoneNumber'].touched">
+                Enter a valid phone number (10-15 digits).
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" formControlName="address" placeholder="Address" required />
+            <div class="error" *ngIf="studentForm.controls['address'].invalid && studentForm.controls['address'].touched">
+                Address is required (min 5 characters).
+            </div>
+        </div>
+
+        <div class="tos-container">
+            <label>
+                <input type="checkbox" formControlName="tosAccepted" />
+                I agree to the Terms of Service
+            </label>
+            <div class="error" *ngIf="studentForm.controls['tosAccepted'].invalid && studentForm.controls['tosAccepted'].touched">
+                You must accept the Terms of Service.
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="studentForm.invalid">
+            {{ editMode ? 'Update Student' : 'Add Student' }}
+        </button>
+    </form>
+
+    <div class="students-container">
+        <h2>Students List</h2>
+        <p>Total Students: {{ students.length }}</p>
+      
+        <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="add-student-form">
+          <!-- Add Student Form (your form fields here) -->
+        </form>
+      
+        <!-- Display Custom Cards for Each Student -->
+        <div class="row">
+          <div class="col-md-4" *ngFor="let student of students">
+            <app-custom-card
+              [firstName]="student.firstName"
+              [lastName]="student.lastName"
+              [dateOfBirth]="student.dateOfBirth"
+              [email]="student.email"
+              [phoneNumber]="student.phoneNumber"
+              [address]="student.address"
+              [studentId]="student.id"
+              (onDelete)="deleteStudent($event)"
+              (onEdit)="editStudent($event)">
+            </app-custom-card>
+          </div>
+        </div>
+      </div>
+      
+</div>

@@ -1,0 +1,14 @@
+/* Add this to your CSS file */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Centers the cards vertically */
+  }
+  
+  .col-md-4 {
+    display: flex;
+    justify-content: center; /* Center content inside each column */
+    margin-bottom: 20px;
+  }
+  

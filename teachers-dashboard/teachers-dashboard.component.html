@@ -1,0 +1,17 @@
+<div class="row justify-content-center">
+  <div class="col-md-4 mb-3" *ngIf="teacher">
+    <app-custom-card
+      [firstName]="teacher.firstName"
+      [lastName]="teacher.lastName"
+      [dateOfBirth]="teacher.dateOfBirth"
+      [email]="teacher.email"
+      [phoneNumber]="teacher.phoneNumber"
+      [address]="teacher.address"
+      [gender]="teacher.gender"
+      [subject]="teacher.subject"
+      [studentId]="teacher.id"
+      (onEdit)="editTeacherById(teacher.id)"
+      (onDelete)="deleteTeacher(teacher.id)">
+    </app-custom-card>
+  </div>
+</div>

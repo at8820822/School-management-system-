@@ -1,0 +1,95 @@
+.dashboard-container {
+    text-align: center;
+    padding: 60px;
+    background-image: url('https://d1myhw8pp24x4f.cloudfront.net/software_logo/1586158989_LOGO.jpg');
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 100vh;
+    color: white;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #00ffd0e1; /* Change background-color to color */
+}
+
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #00ffd0e1;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.quick-links button {
+    background-color: #00ffd0e1;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.quick-links button:hover {
+    background-color: rgba(0, 123, 255, 1);
+    transform: scale(1.05);
+}
+.dashboard-container {
+    padding: 20px;
+    background-color: #f4f6f9;
+    text-align: center;
+  }
+  
+  .dashboard-container h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-container p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .quick-links button {
+    background-color: #00ffd0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quick-links button:hover {
+    background-color: #00ccaa;
+  }
+  
+  .quick-links button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,23 @@
+<div class="student-card-grid">
+  <div class="student-card">
+    <div class="student-card-header">
+      <h5>{{ firstName }} {{ lastName }}</h5>
+      <p>{{ dateOfBirth | date: 'yyyy-MM-dd' }}</p>
+    </div>
+    <div class="student-card-body">
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Phone:</strong> {{ phoneNumber }}</p>
+      <p><strong>Address:</strong> {{ address }}</p>
+  
+      <!-- Display Teacher-specific fields if gender and subject are available -->
+      <p *ngIf="gender"><strong>Gender:</strong> {{ gender }}</p>
+      <p *ngIf="subject"><strong>Subject:</strong> {{ subject }}</p>
+    </div>
+    <div class="student-card-footer">
+      <button class="btn btn-danger" (click)="handleDelete()">Delete</button>
+      <button class="btn btn-primary" (click)="handleEdit()">Edit</button>
+    </div>
+  </div>
+  
+
+</div>

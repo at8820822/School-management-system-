@@ -1,0 +1,136 @@
+/* Main Container */
+.teachers-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Form Design */
+.add-teacher-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Input Fields - All Same Size */
+.add-teacher-form input,
+.add-teacher-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Validation Error Messages */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 3px;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Button Styling */
+button {
+  background-color: #00ffd0e1;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 350px;
+}
+
+button:hover {
+  background-color: #00ccaa;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #00ffd0e1;
+  color: white;
+}
+
+/* Buttons in Actions Column */
+.button1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.button1 button {
+  flex: 1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .add-teacher-form {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .add-teacher-form input,
+  .add-teacher-form select,
+  button {
+      width: 100%;
+      max-width: 350px;
+  }
+
+  table, th, td {
+      font-size: 14px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}

@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+    <h1>Welcome to Digital School Management System</h1>
+    <p>Manage your school efficiently with our system.</p>
+
+    <div class="quick-links">
+        <!-- Admin-only links -->
+        <button *ngIf="isAdmin()" routerLink="/students">📚 Students</button>
+        <button *ngIf="isAdmin()" routerLink="/teachers">👩‍🏫 Teachers</button>
+        <button *ngIf="isAdmin()" routerLink="/classes">🏫 Classes</button>
+        <button *ngIf="isAdmin()" routerLink="/attendance">📅 Attendance</button>
+
+        <!-- Teacher-only links -->
+        <button *ngIf="isTeacher()" routerLink="/my-classes">👩‍🏫 My Classes</button>
+        <button *ngIf="isTeacher()" routerLink="/my-students">👨‍🏫 My Students</button>
+
+        <!-- Student-only links -->
+        <button *ngIf="isStudent()" routerLink="/my-grades">📊 My Grades</button>
+        <button *ngIf="isStudent()" routerLink="/my-assignments">📋 My Assignments</button>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<div class="auth-container">
+  <!-- Left Section -->
+
+
+  <!-- Right Section (Signup Form) -->
+  <div class="auth-box right-box">
+    <h2>Sign Up</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+      
+      <div class="input-group">
+        <input id="email" type="email" formControlName="email" placeholder="Email" required />
+      </div>
+
+      <div class="input-group">
+        <input id="username" type="text" formControlName="username" placeholder="Username" required />
+      </div>
+
+      <div class="input-group">
+        <input id="password" type="password" formControlName="password" placeholder="Password" required />
+      </div>
+
+      <!-- Role Selection -->
+      <div class="input-group">
+        <select id="role" formControlName="role" required>
+          <option value="" disabled>Select a role</option>
+          <option value="Student">Student</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </div>
+
+      <p class="forgot-password">Forgot Password?</p>
+
+      <button type="submit" [disabled]="signupForm.invalid" class="login-btn">Sign Up</button>
+      
+    </form>
+  </div>
+</div>

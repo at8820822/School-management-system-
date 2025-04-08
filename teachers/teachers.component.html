@@ -1,0 +1,84 @@
+<div class="teachers-container">
+    <h2>Teachers List</h2>
+    <p>Total Teachers: {{ teachers.length }}</p>
+
+    <form [formGroup]="teacherForm" (ngSubmit)="onSubmit()" class="add-teacher-form">
+        <div class="form-group">
+            <input type="text" formControlName="firstName" placeholder="First Name" required />
+            <div *ngIf="teacherForm.controls['firstName'].invalid && teacherForm.controls['firstName'].touched" class="error">
+                First Name is required (Min 2 characters)
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" formControlName="lastName" placeholder="Last Name" required />
+            <div *ngIf="teacherForm.controls['lastName'].invalid && teacherForm.controls['lastName'].touched" class="error">
+                Last Name is required (Min 2 characters)
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="date" formControlName="dateOfBirth" required />
+            <div *ngIf="teacherForm.controls['dateOfBirth'].invalid && teacherForm.controls['dateOfBirth'].touched" class="error">
+                Date of Birth is required
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" formControlName="gender" placeholder="Gender" required />
+            <div *ngIf="teacherForm.controls['gender'].invalid && teacherForm.controls['gender'].touched" class="error">
+                Gender is required
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="email" formControlName="email" placeholder="Email" required />
+            <div *ngIf="teacherForm.controls['email'].invalid && teacherForm.controls['email'].touched" class="error">
+                Enter a valid email
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" formControlName="phoneNumber" placeholder="Phone Number" required />
+            <div *ngIf="teacherForm.controls['phoneNumber'].invalid && teacherForm.controls['phoneNumber'].touched" class="error">
+                Enter a valid phone number (10-15 digits)
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" formControlName="address" placeholder="Address" required />
+            <div *ngIf="teacherForm.controls['address'].invalid && teacherForm.controls['address'].touched" class="error">
+                Address is required (Min 5 characters)
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" formControlName="subject" placeholder="Subject" required />
+            <div *ngIf="teacherForm.controls['subject'].invalid && teacherForm.controls['subject'].touched" class="error">
+                Subject is required
+            </div>
+        </div>
+    
+        <button type="submit" [disabled]="teacherForm.invalid">
+            {{ editMode ? 'Update Teacher' : 'Add Teacher' }}
+        </button>
+    </form>
+
+    <div class="row">
+        <div class="col-md-4 mb-3" *ngFor="let teacher of teachers">
+          <app-custom-card
+            [firstName]="teacher.firstName"
+            [lastName]="teacher.lastName"
+            [dateOfBirth]="teacher.dateOfBirth"
+            [email]="teacher.email"
+            [phoneNumber]="teacher.phoneNumber"
+            [address]="teacher.address"
+            [gender]="teacher.gender"
+            [subject]="teacher.subject"
+            [studentId]="teacher.id"
+            (onEdit)="editTeacherById($event)"
+            (onDelete)="deleteTeacher($event)">
+          </app-custom-card>
+        </div>
+      </div>
+</div>
