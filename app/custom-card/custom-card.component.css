@@ -1,0 +1,103 @@
+/* Main container for student cards */
+.student-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px; /* Increased space between cards */
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Card Styles */
+.student-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  margin: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.student-card-header {
+  background-color: #00ffd0e1;
+  padding: 12px;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Body */
+.student-card-body {
+  background: linear-gradient(#90deea, #e2e2e2, #c9d6ff);
+  padding: 15px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  background-color: #f9f9f9;  /* Light background color */
+  border-radius: 6px;  /* Smooth edges */
+  border: 1px solid #ddd;  /* Border for slight definition */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow inside the card */
+}
+
+.student-card-body p {
+  margin-bottom: 10px;  /* Space between paragraphs */
+}
+
+.student-card-body strong {
+  color: #007bff;  /* Accent color for strong text (labels) */
+}
+
+
+/* Footer */
+.student-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* Buttons */
+.student-card-footer button {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.student-card-footer button:hover {
+  opacity: 0.8;
+}
+
+.student-card-footer .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.student-card-footer .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.student-card-footer .btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.student-card-footer .btn-danger:hover {
+  background-color: #c62828;
+}

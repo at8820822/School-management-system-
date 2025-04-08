@@ -1,0 +1,124 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://d1myhw8pp24x4f.cloudfront.net/software_logo/1586158989_LOGO.jpg');
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  height: 100%; 
+}
+
+/* Main container to wrap the header, content, and footer */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin-top: auto;/* Ensures content takes at least the full viewport height */
+}
+
+/* Header Section Styling */
+.header-container {
+   /* Fixes the header at the top */
+  top: 0; /* Ensures it stays at the very top */
+  left: 0; /* Aligns it to the left edge */
+  width: 100%; /* Makes it span the full width */
+  z-index: 1000; /* Keeps it above other elements */
+  display: flex;
+  justify-content: space-between;
+ 
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #00ffd0e1; /* Blue-green background for header */
+  color: white; /* White color for header text */
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Form Section Styling */
+.form-container {
+  flex-grow: 1; /* Makes the form container take up the available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styling */
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* This ensures the footer stays at the bottom of the page */
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.app-footer .footer-links {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.app-footer .footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.app-footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.app-footer .footer-links a:hover {
+  color: #007bff; /* Change to blue when hovered */
+}

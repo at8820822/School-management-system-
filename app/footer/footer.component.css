@@ -1,0 +1,58 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the screen */
+  }
+  
+  /* Main container to wrap the header, content, and footer */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    padding-bottom: 50px; /* Ensures content doesn't get hidden under the footer */
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background: linear-gradient(#90deea, #e2e2e2, #c9d6ff);
+    color: green;
+    text-align: center;
+    padding: 5px;
+    position: fixed; /* This makes the footer fixed at the bottom */
+    left: 0;
+    bottom: 0; /* Ensures the footer is at the bottom of the page */
+    width: 100%; /* Full width */
+    z-index: 100; /* Ensures the footer appears above other content */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+    
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .footer-links a {
+    color: green;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color:greenyellow; /* Change to blue when hovered */
+  }
+  
