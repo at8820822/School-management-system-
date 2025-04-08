@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  body.dark-mode {
+    background: #111;
+    color: #fff;
+  }
